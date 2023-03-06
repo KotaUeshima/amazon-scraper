@@ -1,27 +1,62 @@
-# Next.js + Tailwind CSS Example
+# Amazon Web Scraper
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Setup
 
-## Deploy your own
+- Using Next.js 13 Syntax
+- Look at next.config.js
+- create new app folder for homepage
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+All pages in app directory are server components, to make it a client component put "use client" on the top, if you have click events
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## BrightData
 
-## How to use
+https://brightdata.com/cp/data_collector?collector_id=c_let2syvr18q771n5yt
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Integrate to your system => Delievery Preferences => When finished, notify me by => Webhook
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+## Firebase
+
+Cloud functions to create a Webhook
+Instructions in package.json of CLI commands have to be in /functions folder
+Switched to Node 18
+npm run serve
+
+Ngrok - Tunneling
+Allows you to create a public endpoint for a local host ednpoint
+Helpful so you don't have to keep deploying
+
+Create new folder (mkdir)
+
+```
+git init
+firebase init
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+Database
+
+Service Accounts => Generate New Private Key
+
+```
+npm i firebase-admin
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+## NPM Instals
+
+```
+npm install @heroicons/react
+npm install firebase-admin --save
+npm install firebase
+npm install react-firebase-hooks
+npm install react-spinkit
+npm i --save-dev @types/react-spinkit
+npm install react-hot-toast
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Backend URL
+
+https://console.firebase.google.com/project/brightdata-scraper/overview
+
+## Credit
+
+- Project based on video by Sonny Sangha
+- https://www.youtube.com/watch?v=FJb8xOhX3ZE&list=PLxgWUhmKUPYMPQKf_08JUCcjzu6bBKKHZ&index=3&ab_channel=SonnySangha
