@@ -1,5 +1,7 @@
 # Amazon Web Scraper
 
+Project that scrapes information from Amazon website using, Brightdata and Webhooks. The user can input a search, which will send a request to brightdata, which is responsible for scraping data, the information will be sent to a webhook, which posts the data onto firebase, and after completion the results will send back to website.
+
 ## Setup
 
 - Using Next.js 13 Syntax
@@ -40,7 +42,7 @@ Service Accounts => Generate New Private Key
 npm i firebase-admin
 ```
 
-## NPM Instals
+## NPM Installs
 
 ```
 npm install @heroicons/react
