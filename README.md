@@ -1,64 +1,60 @@
 # Amazon Web Scraper
 
-Project that scrapes information from Amazon website using, Brightdata and Webhooks. The user can input a search, which will send a request to brightdata, which is responsible for scraping data, the information will be sent to a webhook, which posts the data onto firebase, and after completion the results will send back to website.
+Project that scrapes information from Amazon website using, Brightdata and Webhooks. Powered by Next.js and deployed on Vercel.
 
-## Setup
+## Demo
 
-- Using Next.js 13 Syntax
-- Look at next.config.js
-- create new app folder for homepage
+You can access the web demo at https://brightdata-amazon-scraper-lovat.vercel.app/
 
-All pages in app directory are server components, to make it a client component put "use client" on the top, if you have click events
+## Screenshots
 
-## BrightData
+![screenshot](./public/screenshot.png)
 
-https://brightdata.com/cp/data_collector?collector_id=c_let2syvr18q771n5yt
+## Tools
 
-Integrate to your system => Delievery Preferences => When finished, notify me by => Webhook
+**Bright Data**
 
-## Firebase
+https://brightdata.com/
 
-Cloud functions to create a Webhook
-Instructions in package.json of CLI commands have to be in /functions folder
-Switched to Node 18
+**Fire Base**
+
+- Used as backend for data storage
+  https://console.firebase.google.com/u/0/
+
+- Cloud functions to create a webhoook
+  https://github.com/KotaUeshima/amazon-scraper-backend
+- switch to Node 18 using NVM (Node Version Manager)
+
+Run local server for cloud function
+
+```
 npm run serve
-
-Ngrok - Tunneling
-Allows you to create a public endpoint for a local host ednpoint
-Helpful so you don't have to keep deploying
-
-Create new folder (mkdir)
-
-```
-git init
-firebase init
 ```
 
-Database
+**Ngrok**
 
-Service Accounts => Generate New Private Key
+- Tunneling allows you to temporarily create a public server from a locally hosted server
+
+## Libraries
+
+**Firebase**
 
 ```
-npm i firebase-admin
+npm install firebase-admin
+npm install firebase
+npm install react-firebase-hooks
 ```
 
-## NPM Installs
+**UI Tools**
 
 ```
 npm install @heroicons/react
-npm install firebase-admin --save
-npm install firebase
-npm install react-firebase-hooks
 npm install react-spinkit
-npm i --save-dev @types/react-spinkit
+npm install @types/react-spinkit
 npm install react-hot-toast
 ```
 
-## Backend URL
-
-https://console.firebase.google.com/project/brightdata-scraper/overview
-
 ## Credit
 
-- Project based on video by Sonny Sangha
-- https://www.youtube.com/watch?v=FJb8xOhX3ZE&list=PLxgWUhmKUPYMPQKf_08JUCcjzu6bBKKHZ&index=3&ab_channel=SonnySangha
+- Project based on content created by Sonny Sangha, much appreciate to his youtube channel
+- https://www.youtube.com/@SonnySangha
