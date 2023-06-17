@@ -14,18 +14,16 @@ You can access the web demo at https://brightdata-amazon-scraper-lovat.vercel.ap
 
 **Bright Data**
 
-https://brightdata.com/
+- https://brightdata.com/
 
 **Fire Base**
 
-- Used as backend for data storage
-  https://console.firebase.google.com/u/0/
+- Used as backend for data storage - https://console.firebase.google.com/u/0/
 
-- Cloud functions to create a webhoook
-  https://github.com/KotaUeshima/amazon-scraper-backend
-- switch to Node 18 using NVM (Node Version Manager)
+- Cloud functions to create a webhoook - https://github.com/KotaUeshima/amazon-scraper-backend
+- Switch to Node 18 using NVM (Node Version Manager)
 
-Run local server for cloud function
+Run local server for cloud function:
 
 ```
 npm run serve
